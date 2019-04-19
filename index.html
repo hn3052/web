@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .static{
+      border: 1px solid blue;
+      width: 100px;
+      height: 100px;
+      position: static;
+    }
+    .relative{
+      border: 1px solid red;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 50px;
+      top: 50px;
+    }
+    .absolute{/*div안에 div를 반복하여 넣으면 부모자식관계식으로
+      먼저생성한 div기준으로 겹쳐서 생성된다.*/
+      border: 1px solid green;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 150px;
+      top: 150px;
+    }
+    .fixed{
+      border: 1px solid yellow;
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>포지션 관련 트레이닝</h1>
+
+    <div class="static">static포지션입니다.</div>
+    <div class="static">static포지션입니다.</div>
+    <!--static은 정렬-->
+    <div class="relative">relative포지션입니다.</div>
+    <!--relative은 위에 있는 static에 밀리는 상대적 정렬-->
+    <div class="absolute">
+      absolute포지션입니다.
+      <div class="absolute">
+        absolute포지션입니다.
+      </div>
+    </div>
+    <!--absolute는 웹자체기준으로 부모자식관계로 정렬-->
+
+    <div class="fixed">fixed포지션입니다.</div>
+    <!--fixed는 이 자체로 상관 없이 정렬-->
+  </body>
+</html>
+
+
+
+<!-- 1. static 2. relative 3. absolute 4. fixed
+css 부모자식관계
+css 조상관계-->
